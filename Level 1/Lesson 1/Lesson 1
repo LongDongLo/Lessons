@@ -1,0 +1,26 @@
+print("   *      * ")
+print(" *   *  *   *")
+print("   *      *")
+will = 24
+fin = '45'
+print((will) + int(fin))
+
+print("What is your favourite number? Will: ")
+urmom = int(input())
+
+urdad = int(input("What is your favourite number? Ryanna: "))
+
+urgay =int(input("What is your favourite number? Amelia: "))
+
+print("Your favourite numbers added together are:  ")
+
+print(urgay + urmom + urdad)
+print("Your favourite numbers multiplied together are:  ")
+print(urgay * urmom * urdad)
+
+#True/False = boolean
+#Decimals = float
+#elif = ElseIf
+#ElseIf only runs if If is false
+
+#Homework (Variable Converter): write a programm that takes two user integers then tells you which is greater:

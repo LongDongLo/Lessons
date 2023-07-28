@@ -1,0 +1,11 @@
+#Homework: Take two user inputs and switch their values, to then print them in inverse order
+print("Hello! Please enter two numbers and I will instantly switch their values!")
+number1 = input("Number one: ")
+number2 = input("Number two: ")
+temp = number1
+number1 = number2
+number2 = temp
+print("Wow, look at that!!")
+print("Number one: " + str(number1))
+print("Number two: " + str(number2))
+

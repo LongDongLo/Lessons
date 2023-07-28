@@ -1,0 +1,40 @@
+# 1. Pusheen name checker
+"""
+sig = input()
+count = -1
+counter = 0
+name = "pusheen"
+for i in range(7):
+    count = count + 1
+    if sig[count] != name[count]:
+        counter = counter + 1
+
+print(counter)
+"""
+# 2. High and Low Integers
+counter = 0
+low = int(input("Low = "))
+high = int(input("High = "))
+if low % 2 == 0:
+    for i in range(low, high, 2):
+        counter = counter + 1
+else:
+    counter = counter + 1
+    for i in range(low, high, 2):
+        counter = counter + 1
+print(counter)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

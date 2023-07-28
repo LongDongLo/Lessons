@@ -1,0 +1,10 @@
+#Types of loops: 1. for loop 2. while loop 3. do while loop
+b = 0
+c = 0
+while b != 17:
+    print("incorrect")
+    b = int(input("Try to guess the secret number: "))
+    c = c + b
+print("correct")
+print("Your guesses all added together are equal to " + str(c))
+

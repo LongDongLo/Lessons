@@ -1,0 +1,51 @@
+import math
+
+"""
+Given numBottles full water bottles, you can exchange numExchange empty water bottles for one full water
+bottle. The operation of drinking a full water bottle turns it into an empty bottle. Return the maximum number
+of water bottles you can drink.
+"""
+
+drank = 0
+left = 0
+
+numBottles = int(input("Number of Bottles: "))
+numExchange = int(input("Empty Bottles for one Full: "))
+while numBottles >= numExchange:
+    drank = drank + numBottles
+    left = left + numBottles % numExchange
+    numBottles = numBottles / numExchange
+    numBottles = numBottles + left / numExchange
+
+if drank % 1 == 0:
+    drank = drank + numBottles
+print(math.floor(drank))
+
+
+
+
+
+
+
+
+
+"""
+for i in range(5): # for(int i = 0, i < 5; i++){}
+    print(i)
+
+for i in range(2, 10): # i < 10 but when i == 10 the loop breaks
+    print(i)
+
+d = True
+while(d):
+    if something is happening
+        d = false
+
+is the same as:
+
+while something is not happening:
+"""
+# setting range(0, 10, 1) would be pointless
+# the symbol % is known as "mode"
+
+

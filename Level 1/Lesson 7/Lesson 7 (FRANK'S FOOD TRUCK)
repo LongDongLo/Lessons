@@ -1,0 +1,83 @@
+stock1 = 20
+stock2 = 15
+stock3 = 12
+price1 = 6.5
+price2 = 6.75
+price3 = 7.25
+switch = 0
+number1 = 0
+number2 = 0
+number3 = 0
+
+while stock1 + stock2 + stock3 > 0:
+    print("HELLO THERE! Welcome to Frank's Fantastic Food Truck!")
+    print("1. Deep Fried Butter (x" + str(stock1) + " in stock), 2. Deep Fried Butter on a Stick (x" + str(stock2) + " in stock), 3. Extra Deep Fried VEGAN Margarine Bites (x" + str(stock3) + " in stock).")
+    while switch == 0:
+        choice = int(input("What would you like to buy? "))
+        print()
+        if choice == 1:
+            if stock1 <= 0:
+                print("Oh no, we don't have any of those left!")
+            else:
+                number1 = int(input("How many would you like? "))
+                print()
+                while number1 > stock1 and stock1 > 0:
+                    number1 = int(input("Sorry, it looks like we have " + str(stock1) + " of those left. How many would you like to purchase instead? "))
+            stock1 = stock1 - number1
+        elif choice == 2:
+            if stock2 <= 0:
+                print("Oh no, we don't have any of those left!")
+            else:
+                number2 = int(input("How many would you like? "))
+                print()
+                while number2 > stock2:
+                    number2 = int(input("Sorry, it looks like we have " + str(stock2) + " of those left. How many would you like to purchase instead? "))
+            stock2 = stock2 - number2
+        else:
+            if stock3 <= 0:
+                print("Oh no, we don't have any of those left!")
+            else:
+                number3 = int(input("How many would you like? "))
+                print()
+                while number3 > stock3:
+                    number3 = int(input("Sorry, it looks like we have " + str(stock3) + " of those left. How many would you like to purchase instead? "))
+            stock3 = stock3 - number3
+        choice1 = input("Would you like to buy anything else? (yes or no): ")
+        if choice1 == "no" or choice1 == "n" or choice == "No":
+            choice = 0
+            switch = 7
+
+    if choice == 1:
+        price = number1 * price1 + number2 * price2 + number3 * price3
+        print("Great choice! That will be $" + str(price))
+    elif choice == 2:
+        price = number1 * price1 + number2 * price2 + number3 * price3
+        print("An excellent choice! That will cost $" + str(price))
+    else:
+        price = number1 * price1 + number2 * price2 + number3 * price3
+        print("Okay! That will cost you $" + str(price))
+
+    print()
+    pay = float(input("How much will you be paying? "))
+
+    while pay < price:
+        owe = price - pay
+        add = float(input("Oops! It looks like you still need to pay $" + str(owe) + ". How much more will you pay? "))
+        pay = pay + add
+    change = pay - price
+    if change < 0.01:
+        change = 0.00
+    switch = 0
+    print()
+    print("Your change comes to $" + str(change))
+    print("Please come again!")
+    print()
+print("Sorry, we're closed!")
+
+
+
+"""
+Things I could still implement:
+- One cent return
+- Cancelling food order if out of stock3
+"""

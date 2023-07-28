@@ -1,0 +1,16 @@
+#Homework (Variable Converter): write a programm that takes two user integers then tells you which is greater:
+print("Find out who is taller between you and your friend!")
+print()
+
+name1 = input("What is your name friend number one?: ")
+name2 = input("What is your name friend number two?: ")
+
+Person1 = int(input("How tall are you, " + name1 + "? "))
+Person2 = int(input("How tall are you, " + name2 + "? "))
+
+if Person1 > Person2:
+    print("Wow! " + name1 + " is taller!")
+elif Person2 > Person1:
+    print("Fantastic! " + name2 + " is taller!")
+
+

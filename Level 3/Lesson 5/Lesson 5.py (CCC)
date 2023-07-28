@@ -1,0 +1,4 @@
+# Cupcake Party
+regBoxes = int(input())
+smallBoxes = int(input())
+print(regBoxes*8+smallBoxes*3-28)

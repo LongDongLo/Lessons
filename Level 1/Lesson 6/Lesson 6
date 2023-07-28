@@ -1,0 +1,18 @@
+# Inner loops must be finished before returning to Outer
+for i in range(2, 4, 2):
+    print("a")
+
+for i in range(5):# outer loop
+    for j in range(2):# inner loop
+        print("1 ",end="")
+        if i > 2:
+            break
+
+for i in range(5):# outer loop
+    print("i is: "+ str(i))
+    for j in range(2):# inner loop
+        print("3 ",end="")
+        print("j is: "+ str(j))
+        if i > 2:
+          break
+

@@ -1,0 +1,42 @@
+#Temperature and Atmospheric Pressure Calculator
+
+temperature = int(input("What degrees celsius would you like the calculate the atmospheric pressure of?: "))
+Pressure = 5 * temperature - 400
+print(str(Pressure) + "kPa is the pressure that water will boil at " + str(temperature) + "°C.")
+
+if Pressure < 100:
+    print("Your pressure is above sea level!")
+elif Pressure > 100:
+    print("Your pressure is below sea level!")
+else:
+    print("Your pressure is at sea level!")
+
+input("Type next:")
+#Operators that perform conditional checks: if, and, or
+#if creates a new line, elif runs if then stops the line, and else runs if all else fails
+
+number1 = int(input("What is your favourite number?: "))
+number2 = int(input("What is your second favourite number?: "))
+number3 = int(input("What is your third favourite number?: "))
+
+if number1 == number2 or number2 == number3 or number1 == number3:
+    print("Hey! You cheated, because two of those numbers are the same!")
+if number1 > number2 and number1 > number3:
+    print("Your faaaavourite number is the largest!")
+if number2 > number1 and number2 > number3:
+    print("Your seeeeecond favourite number is the biggest!")
+if number3 > number2 and number3 > number1:
+    print("Your thirrrrrd faavourite number is the largest!")
+if number1 < number2 and number1 < number3:
+    print("Your faaaavourite number is the smallest!")
+if number2 < number1 and number2 < number3:
+    print("Your seeeeecond favourite number is the least large!")
+if number3 < number2 and number3 < number1:
+    print("Your thirrrrrd faavourite number is the smallest!")
+if number1 == number2 and number1 == number3:
+    print("ALLLLLL the numbers are the same!")
+
+
+
+
+
